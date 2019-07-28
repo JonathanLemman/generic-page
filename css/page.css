@@ -4,20 +4,22 @@
     padding: 0;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 /* Testing Fork */
 
 .wrapper {
     display: grid;
     height: 100vh;
-    grid-template-columns: 200px 1fr 300px;
-    grid-template-rows: 30px repeat(3, 1fr) 100px 120px;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 30px 1fr 100px 120px;
     grid-template-areas:
-    "nav nav nav"
-    "menu main ads"
-    "menu main ads"
-    "menu main ads"
-    "menu nums nums"
-    "menu footer footer";
+    "nav nav "
+    "menu main"
+    "menu nums"
+    "menu footer";
 }
 
 header {
@@ -29,6 +31,10 @@ header {
 
 h2 {
     color: #569188;
+}
+
+h2, p {
+    font-weight: 300;
 }
 
 aside {
@@ -47,24 +53,16 @@ main {
     grid-area: main;
     background: white;
     padding: .5em;
+    overflow: auto;
+}
+
+main section {
+    display: flex;
+    margin: 1em;
 }
 
 h2 {
     margin-bottom: .5em;
-}
-
-article {
-    display: flex;
-    /*height: fit-content;*/
-    flex-direction: column;
-    grid-area: ads;
-    background: white;
-}
-
-article section {
-    height: fit-content;
-    width: 90%;
-    margin: auto;
 }
 
 footer {
@@ -142,8 +140,8 @@ footer a {
 }
 
 .nums ul li {
-    padding: .7em 1em;
-    margin: 2px;
+    padding: .5em .8em;
+    margin: 1.5px;
 }
 
 .nums ul li:hover {
@@ -167,6 +165,16 @@ footer a {
      border: 1px solid black;
      height: 110px;
      width: 100%;
+ }
+
+ .ads {
+     width: 80%;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .head {
+     padding: 0 .5em;
  }
 
 
